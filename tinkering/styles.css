@@ -1,0 +1,15 @@
+header, main, section, article {
+    border: 1px solid red;
+}
+
+header{
+    position:sticky;
+    top:0;
+    
+    background-color: blanchedalmond;
+}
+
+body{
+    max-width: 900px;
+    margin: 0 auto;
+}
