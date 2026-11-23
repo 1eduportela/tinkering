@@ -1,15 +1,142 @@
-header, main, section, article {
-    border: 1px solid red;
+/* 1. TIPOGRAFÍA: carga DM Sans desde Google Fonts (tiene que ser la primera línea) */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* 2. PALETA DE COLORES: se definen una vez y se usan con var(--nombre) */
+:root {
+    --fondo: #e4e4e4;
+    --fondo-header: #ebebeb;
+    --blanco: #ffffff;
+    --oscuro: #121212;
+    --texto: #111111;
+    --texto-suave: #5f5f5f;
+    --borde: #d4d4d4;
+    --amarillo: #f2e11d;
 }
 
-header{
-    position:sticky;
-    top:0;
-    
-    background-color: blanchedalmond;
+/* El padding no suma al ancho de las cajas (evita sorpresas) */
+* {
+    box-sizing: border-box;
 }
 
-body{
+/* 3. PÁGINA */
+html {
+    background-color: var(--oscuro);
+    background-image: url("img/lateral-izquierdo.svg"), url("img/lateral-derecho.svg");
+    background-position: left center, right center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
     max-width: 900px;
     margin: 0 auto;
+    min-height: 100vh;
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: 'DM Sans', Arial, sans-serif;
+}
+
+/* 4. HEADER */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    padding: 24px 20px 16px;
+    background-color: var(--fondo-header);
+    border-bottom: 1px solid var(--borde);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+header p {
+    margin: 4px 0 16px;
+    color: var(--texto-suave);
+    font-weight: 500;
+}
+
+/* 5. BOTONES DEL MENÚ */
+nav a {
+    display: inline-block;
+    margin: 0 4px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--blanco);
+    color: var(--texto);
+}
+
+/* 6. CONTENIDO */
+main {
+    padding: 24px 20px;
+}
+
+.seccion h2 {
+    margin: 0 0 20px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* 7. TARJETAS DE LAS ENTRADAS */
+.entrada {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--blanco);
+    border-radius: 12px;
+    border-top: 4px solid transparent;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.2s;
+}
+
+.entrada:hover {
+    border-top-color: var(--amarillo);
+}
+
+.resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.resumen h1,
+.resumen h3 {
+    margin: 0 0 6px;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.resumen time {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--texto-suave);
+}
+
+.resumen p {
+    margin: 8px 0 0;
+    color: var(--texto-suave);
+    line-height: 1.5;
+}
+
+.resumen img {
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: var(--oscuro);
 }

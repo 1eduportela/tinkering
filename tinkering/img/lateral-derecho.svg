@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1200" preserveAspectRatio="xMidYMid slice">
+  <!-- Lateral derecho: tecnología y cacharreo -->
+  <defs>
+    <pattern id="cuadricula" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#1f1f1f" stroke-width="1"/>
+    </pattern>
+    <rect id="diente" x="-9" y="-62" width="18" height="18" rx="3"/>
+    <g id="engranaje">
+      <use href="#diente"/>
+      <use href="#diente" transform="rotate(45)"/>
+      <use href="#diente" transform="rotate(90)"/>
+      <use href="#diente" transform="rotate(135)"/>
+      <use href="#diente" transform="rotate(180)"/>
+      <use href="#diente" transform="rotate(225)"/>
+      <use href="#diente" transform="rotate(270)"/>
+      <use href="#diente" transform="rotate(315)"/>
+      <circle r="50"/>
+    </g>
+  </defs>
+
+  <rect width="600" height="1200" fill="#161616"/>
+  <rect width="600" height="1200" fill="url(#cuadricula)"/>
+
+  <!-- ===== PISTAS DE CIRCUITO ===== -->
+  <g fill="none" stroke="#2e2e2e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M290 410 V350 L250 310 H185"/>
+    <path d="M440 500 H510 L550 460 V320"/>
+    <path d="M220 560 H70 V600"/>
+    <path d="M330 630 V690 L362 722"/>
+    <path d="M440 580 H600"/>
+    <path d="M0 470 H40"/>
+  </g>
+  <g fill="#161616" stroke="#f2e11d" stroke-width="3">
+    <circle cx="185" cy="310" r="7"/>
+    <circle cx="550" cy="320" r="7"/>
+    <circle cx="70" cy="600" r="7"/>
+  </g>
+
+  <!-- ===== ANTENA CON ONDAS ===== -->
+  <g stroke="#5a5a5a" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="105" y1="390" x2="140" y2="112"/>
+    <line x1="175" y1="390" x2="140" y2="112"/>
+    <line x1="111" y1="340" x2="169" y2="340"/>
+    <line x1="117" y1="290" x2="163" y2="290"/>
+    <line x1="124" y1="240" x2="156" y2="240"/>
+    <line x1="130" y1="190" x2="150" y2="190"/>
+    <line x1="111" y1="340" x2="163" y2="290"/>
+    <line x1="169" y1="340" x2="117" y2="290"/>
+    <line x1="117" y1="290" x2="156" y2="240"/>
+    <line x1="163" y1="290" x2="124" y2="240"/>
+    <line x1="124" y1="240" x2="150" y2="190"/>
+    <line x1="156" y1="240" x2="130" y2="190"/>
+    <line x1="92" y1="390" x2="188" y2="390"/>
+  </g>
+  <circle cx="140" cy="104" r="7" fill="#f2e11d"/>
+  <g fill="none" stroke="#f2e11d" stroke-width="3" stroke-linecap="round">
+    <path d="M161.2 82.8 A30 30 0 0 1 161.2 125.2"/>
+    <path d="M118.8 82.8 A30 30 0 0 0 118.8 125.2"/>
+    <path d="M178.9 65.1 A55 55 0 0 1 178.9 142.9" opacity="0.65"/>
+    <path d="M101.1 65.1 A55 55 0 0 0 101.1 142.9" opacity="0.65"/>
+    <path d="M196.6 47.4 A80 80 0 0 1 196.6 160.6" opacity="0.35"/>
+    <path d="M83.4 47.4 A80 80 0 0 0 83.4 160.6" opacity="0.35"/>
+  </g>
+
+  <!-- ===== ÁTOMO ===== -->
+  <g transform="translate(445 190)">
+    <g fill="none" stroke="#8a8a8a" stroke-width="2">
+      <ellipse rx="78" ry="26"/>
+      <ellipse rx="78" ry="26" transform="rotate(60)"/>
+      <ellipse rx="78" ry="26" transform="rotate(120)"/>
+    </g>
+    <circle r="12" fill="#f2e11d"/>
+    <circle cx="78" cy="0" r="6" fill="#e8e8e8"/>
+    <g transform="rotate(60)"><circle cx="-78" cy="0" r="6" fill="#e8e8e8"/></g>
+    <g transform="rotate(120)"><circle cx="78" cy="0" r="6" fill="#e8e8e8"/></g>
+  </g>
+
+  <!-- Onda senoidal -->
+  <path d="M20 470 C 40 430, 60 430, 80 470 S 120 510, 140 470 S 180 430, 200 470"
+        fill="none" stroke="#5a5a5a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- ===== MICROCHIP ===== -->
+  <g transform="translate(330 520)">
+    <g stroke="#4a4a4a" stroke-width="6" stroke-linecap="round">
+      <line x1="-60" y1="-95" x2="-60" y2="-110"/><line x1="-20" y1="-95" x2="-20" y2="-110"/>
+      <line x1="20" y1="-95" x2="20" y2="-110"/><line x1="60" y1="-95" x2="60" y2="-110"/>
+      <line x1="-60" y1="95" x2="-60" y2="110"/><line x1="-20" y1="95" x2="-20" y2="110"/>
+      <line x1="20" y1="95" x2="20" y2="110"/><line x1="60" y1="95" x2="60" y2="110"/>
+      <line x1="-95" y1="-60" x2="-110" y2="-60"/><line x1="-95" y1="-20" x2="-110" y2="-20"/>
+      <line x1="-95" y1="20" x2="-110" y2="20"/><line x1="-95" y1="60" x2="-110" y2="60"/>
+      <line x1="95" y1="-60" x2="110" y2="-60"/><line x1="95" y1="-20" x2="110" y2="-20"/>
+      <line x1="95" y1="20" x2="110" y2="20"/><line x1="95" y1="60" x2="110" y2="60"/>
+    </g>
+    <rect x="-90" y="-90" width="180" height="180" rx="14" fill="#222222" stroke="#3a3a3a" stroke-width="2"/>
+    <circle cx="-66" cy="-66" r="6" fill="#3a3a3a"/>
+    <rect x="-36" y="-36" width="72" height="72" rx="6" fill="none" stroke="#f2e11d" stroke-width="3"/>
+    <rect x="-18" y="-18" width="36" height="36" rx="3" fill="#f2e11d" opacity="0.25"/>
+  </g>
+
+  <!-- ===== IMÁN Y CAMPO MAGNÉTICO ===== -->
+  <g transform="translate(120 760)">
+    <g fill="none" stroke="#f2e11d" stroke-width="2" stroke-dasharray="4 7" stroke-linecap="round">
+      <path d="M-40 -72 C -40 -120, 40 -120, 40 -72"/>
+      <path d="M-40 -72 C -50 -160, 50 -160, 40 -72" opacity="0.6"/>
+      <path d="M-40 -72 C -64 -200, 64 -200, 40 -72" opacity="0.35"/>
+    </g>
+    <path d="M-40 -60 V0 A40 40 0 0 0 40 0 V-60" fill="none" stroke="#3a3a3a" stroke-width="28"/>
+    <rect x="-54" y="-74" width="28" height="22" rx="2" fill="#f2e11d"/>
+    <rect x="26" y="-74" width="28" height="22" rx="2" fill="#e8e8e8"/>
+  </g>
+
+  <!-- ===== MOTOR ELÉCTRICO ===== -->
+  <g transform="translate(430 790)">
+    <path d="M-70 -20 C -110 -20, -90 -70, -68 -68" fill="none" stroke="#f2e11d" stroke-width="3"/>
+    <path d="M-70 10 C -120 10, -110 -60, -68 -68" fill="none" stroke="#8a8a8a" stroke-width="3"/>
+    <rect x="-80" y="48" width="160" height="12" rx="3" fill="#3a3a3a"/>
+    <rect x="-56" y="38" width="16" height="14" fill="#3a3a3a"/>
+    <rect x="22" y="38" width="16" height="14" fill="#3a3a3a"/>
+    <rect x="-70" y="-45" width="120" height="88" rx="14" fill="#2c2c2c" stroke="#3a3a3a" stroke-width="2"/>
+    <g stroke="#222222" stroke-width="4">
+      <line x1="-50" y1="-38" x2="-50" y2="36"/>
+      <line x1="-34" y1="-38" x2="-34" y2="36"/>
+      <line x1="-18" y1="-38" x2="-18" y2="36"/>
+      <line x1="-2" y1="-38" x2="-2" y2="36"/>
+      <line x1="14" y1="-38" x2="14" y2="36"/>
+      <line x1="30" y1="-38" x2="30" y2="36"/>
+    </g>
+    <rect x="50" y="-36" width="18" height="72" rx="6" fill="#3a3a3a"/>
+    <rect x="68" y="-6" width="38" height="12" fill="#8a8a8a"/>
+    <circle cx="110" cy="0" r="20" fill="#f2e11d"/>
+    <circle cx="110" cy="0" r="6" fill="#161616"/>
+  </g>
+
+  <!-- ===== HERRAMIENTAS ===== -->
+  <!-- Engranajes -->
+  <g transform="translate(130 1010)" fill="#2c2c2c">
+    <use href="#engranaje"/>
+    <circle r="18" fill="#161616"/>
+  </g>
+  <g transform="translate(226 945) scale(0.6) rotate(22)" fill="#f2e11d">
+    <use href="#engranaje"/>
+    <circle r="18" fill="#161616"/>
+  </g>
+
+  <!-- Destornillador -->
+  <g transform="translate(355 1020) rotate(35)">
+    <rect x="-11" y="-70" width="22" height="60" rx="9" fill="#f2e11d"/>
+    <line x1="-4" y1="-60" x2="-4" y2="-22" stroke="#161616" stroke-width="2" opacity="0.35"/>
+    <line x1="4" y1="-60" x2="4" y2="-22" stroke="#161616" stroke-width="2" opacity="0.35"/>
+    <rect x="-4" y="-10" width="8" height="70" fill="#8a8a8a"/>
+    <polygon points="-4,60 4,60 2,72 -2,72" fill="#8a8a8a"/>
+  </g>
+
+  <!-- Llave inglesa -->
+  <g transform="translate(480 1000) rotate(-45)">
+    <rect x="-12" y="-10" width="24" height="150" rx="12" fill="#e8e8e8"/>
+    <circle cx="0" cy="-30" r="38" fill="#e8e8e8"/>
+    <rect x="-12" y="-80" width="24" height="46" rx="4" fill="#161616"/>
+    <circle cx="0" cy="118" r="6" fill="#161616"/>
+  </g>
+
+  <!-- Martillo -->
+  <g transform="translate(200 1140) rotate(-15)">
+    <rect x="-80" y="-6" width="130" height="12" rx="6" fill="#5a5a5a"/>
+    <rect x="44" y="-22" width="28" height="44" rx="4" fill="#e8e8e8"/>
+    <polygon points="72,-22 96,-14 96,-4 72,-6" fill="#e8e8e8"/>
+  </g>
+
+  <!-- Tornillos y tuercas -->
+  <g fill="#3a3a3a">
+    <polygon points="60,1150 72,1143 84,1150 84,1164 72,1171 60,1164"/>
+    <polygon points="540,1150 550,1144 560,1150 560,1162 550,1168 540,1162"/>
+  </g>
+  <g fill="#161616">
+    <circle cx="72" cy="1157" r="5"/>
+    <circle cx="550" cy="1156" r="4"/>
+  </g>
+</svg>
