@@ -1,7 +1,7 @@
-/* 1. TIPOGRAFÍA: carga DM Sans desde Google Fonts (tiene que ser la primera línea) */
+/* 1. TIPOGRAFÍA */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
-/* 2. PALETA DE COLORES: se definen una vez y se usan con var(--nombre) */
+/* 2. PALETA DE COLORES */
 :root {
     --fondo: #e4e4e4;
     --fondo-header: #ebebeb;
@@ -11,9 +11,9 @@
     --texto-suave: #5f5f5f;
     --borde: #d4d4d4;
     --amarillo: #f2e11d;
+    --gris-claro: #f6f6f6;
 }
 
-/* El padding no suma al ancho de las cajas (evita sorpresas) */
 * {
     box-sizing: border-box;
 }
@@ -23,9 +23,10 @@ html {
     background-color: var(--oscuro);
     background-image: url("img/lateral-izquierdo.svg"), url("img/lateral-derecho.svg");
     background-position: left center, right center;
-    background-size: auto 100%;
+    background-size: calc(50% - 450px) 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -39,9 +40,6 @@ body {
 
 /* 4. HEADER */
 header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
     text-align: center;
     padding: 24px 20px 16px;
     background-color: var(--fondo-header);
@@ -49,15 +47,19 @@ header {
 }
 
 header h1 {
+    display: inline-block;
     margin: 0;
+    padding: 6px 18px;
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    background-color: var(--amarillo);
+    border-radius: 999px;
 }
 
 header p {
-    margin: 4px 0 16px;
+    margin: 8px 0 16px;
     color: var(--texto-suave);
     font-weight: 500;
 }
@@ -67,15 +69,16 @@ nav a {
     display: inline-block;
     margin: 0 4px;
     padding: 10px 20px;
-    border-radius: 10px;
     color: var(--texto-suave);
     text-decoration: none;
     font-weight: 500;
+    background-color: var(--gris-claro);
+    border-radius: 999px;
     transition: background-color 0.2s, color 0.2s;
 }
 
 nav a:hover {
-    background-color: var(--blanco);
+    background-color: var(--amarillo);
     color: var(--texto);
 }
 
@@ -84,14 +87,19 @@ main {
     padding: 24px 20px;
 }
 
+.seccion {
+    margin-bottom: 40px;
+}
+
 .seccion h2 {
     margin: 0 0 20px;
     font-size: 2rem;
     font-weight: 700;
 }
 
-/* 7. TARJETAS DE LAS ENTRADAS */
-.entrada {
+/* 7. TARJETAS (estilo común para entradas, galería y perfil) */
+.entrada,
+.tarjeta {
     margin-bottom: 20px;
     padding: 20px;
     background-color: var(--blanco);
@@ -101,10 +109,12 @@ main {
     transition: border-color 0.2s;
 }
 
-.entrada:hover {
+.entrada:hover,
+.tarjeta:hover {
     border-top-color: var(--amarillo);
 }
 
+/* 8. ENTRADAS */
 .resumen {
     display: flex;
     justify-content: space-between;
@@ -135,8 +145,76 @@ main {
 
 .resumen img {
     width: 200px;
-    height: 140px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 9. GALERÍA */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.galeria img {
+    height: 220px;
+    flex-grow: 1;
     object-fit: cover;
     border-radius: 8px;
-    background-color: var(--oscuro);
+    transition: transform 0.2s;
 }
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+/* 10. SOBRE MÍ */
+.perfil {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.perfil img {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 4px solid var(--amarillo);
+}
+
+.perfil h1 {
+    margin: 0 0 12px;
+    font-size: 1.5rem;
+}
+
+.perfil p,
+.perfil address {
+    margin: 0 0 12px;
+    color: var(--texto-suave);
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.perfil a {
+    color: var(--texto);
+    font-weight: 700;
+    text-decoration-color: var(--amarillo);
+    text-decoration-thickness: 3px;
+}
+
+/* 11. MÓVIL: en pantallas estrechas, foto debajo del texto */
+@media (max-width: 700px) {
+    .resumen,
+    .perfil {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resumen img {
+        width: 100%;
+    }
+}
+
